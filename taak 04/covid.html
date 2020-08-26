@@ -24,6 +24,97 @@
 }
 
 
+
+svg {
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+  display: block;
+  
+}
+
+
+text {
+  font-size: 12px;
+  fill: black;
+  transform: rotate(30deg);
+  text-align: right;
+  position: absolute;
+}
+
+path {
+  stroke: gray;
+}
+
+line {
+  stroke: gray;
+}
+
+line#limit {
+  stroke: #FED966;
+  stroke-width: 3;
+  stroke-dasharray: 3 6;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.grid .tick line {
+  stroke: #9FAAAE;
+  stroke-opacity: 0.3;
+}
+
+text.divergence {
+  font-size: 12px;
+  
+}
+
+text.value {
+  font-size: 9px;
+  transform: rotate(0);
+  
+}
+
+text.title {
+  font-size: 22px;
+  transform: rotate(0);
+}
+
+text.label {
+  font-size: 12px;
+  transform: rotate(0);
+}
+
+text.source {
+  font-size: 10px;
+  transform: rotate(0);
+}
+
+
+
+
+html {
+			font-family: Karla;
+			margin: 0 auto;
+		}	
+
+		.axis {
+			font-size: 13px;
+
+		}
+
+		.axis path,
+		.axis line {
+			fill: none;
+			display: none;
+		}
+
+		.label {
+			font-size: 13px;
+			
+		}
+
 		
 
         
@@ -197,7 +288,130 @@ var covid = [
   }
 ];
 
+var colorColumn = covid.color;
+				var svg = d3.select('svg');
+    var svgContainer = d3.select('#container');
+    
+    var margin = 80;
+    var width = 1000 - 2 * margin;
+    var height = 700 - 2 * margin;
 
+    var chart = svg.append('g')
+      .attr('transform', `translate(${margin}, ${margin})`);
+alldata = Array.from(covid);
+
+    var xScale = d3.scaleBand()
+      .range([0, width])
+      .domain(alldata.map((d) => d.country))
+      .paddingInner(0.3)
+    
+    var yScale = d3.scaleLinear()
+      .range([height, 0])
+      .domain([0, 6000000]);
+
+    // vertical grid lines
+    // var makeXLines = () => d3.axisBottom()
+    //   .scale(xScale)
+
+    var makeYLines = () => d3.axisLeft()
+      .scale(yScale)
+	  
+
+    chart.append('g')
+      .attr('transform', `translate(0, ${height})`)
+	  
+      .call(d3.axisBottom(xScale));
+	  
+
+    chart.append('g')
+      .call(d3.axisLeft(yScale));
+
+    // vertical grid lines
+    // chart.append('g')
+    //   .attr('class', 'grid')
+    //   .attr('transform', `translate(0, ${height})`)
+    //   .call(makeXLines()
+    //     .tickSize(-height, 0, 0)
+    //     .tickFormat('')
+    //   )
+
+    chart.append('g')
+      .attr('class', 'grid')
+      .call(makeYLines()
+        .tickSize(-width, 0, 0)
+        .tickFormat('')
+      )
+	  
+
+    var barGroups = chart.selectAll()
+      .data(covid)
+      .enter()
+      .append('g')
+	  
+	  var colorScale = d3.scaleOrdinal(d3.schemeCategory10)
+				.domain(covid.map(function (d) {
+					return d[colorColumn];
+				}));
+
+    barGroups
+      .append('rect')
+      .attr('class', 'bar')
+      .attr('x', (g) => xScale(g.country))
+      .attr('y', (g) => yScale(g.cases))
+      .attr('height', (g) => height - yScale(g.cases))
+      .attr('width', xScale.bandwidth())
+	  .style("fill", function (d) {
+					return colorScale(d[colorColumn]);
+				})
+				
+      .on('mouseenter', function (actual, i) {
+        d3.selectAll('.value')
+          .attr('opacity', 0)
+
+        d3.select(this)
+          .transition()
+          .duration(300)
+          .attr('opacity', 0.6)
+          .attr('x', (a) => xScale(a.country) - 5)
+          .attr('width', xScale.bandwidth() + 10)
+
+        var y = yScale(actual.cases)
+
+        line = chart.append('line')
+          .attr('id', 'limit')
+          .attr('x1', 0)
+          .attr('y1', y)
+          .attr('x2', width)
+          .attr('y2', y)
+
+		  
+
+      })
+      .on('mouseleave', function () {
+        d3.selectAll('.value')
+          .attr('opacity', 1)
+		  
+
+        d3.select(this)
+          .transition()
+          .duration(300)
+          .attr('opacity', 1)
+          .attr('x', (a) => xScale(a.country))
+          .attr('width', xScale.bandwidth())
+		  
+
+        chart.selectAll('#limit').remove()
+        chart.selectAll('.divergence').remove()
+      })
+
+    barGroups 
+      .append('text')
+      .attr('class', 'value')
+      .attr('x', (a) => xScale(a.country) + xScale.bandwidth() / 2)
+      .attr('y', (a) => yScale(a.cases) - 10)
+      .attr('text-anchor', 'middle')
+
+      .text((a) => `${a.cases}`)
 	  
     
     
