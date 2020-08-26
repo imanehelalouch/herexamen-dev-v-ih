@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <title>Covid-19</title>
+
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Bar chart with D3.js</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<style type="text/css">
+		h3, p {
+            text-align: center;
+            width: 500px;
+            display: block;
+            margin: 0 auto;
+            padding-top: 2em;
+        }
+        body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+		
+
+        
+	</style>
+</head>
+
+<body>
+    <h3>Covid-19 cases as of August 25th</h3>
+	<p>
+    The coronavirus has spread worldwide for about 6 months now. 
+    Right her we can see an overview of the amount of cases per continent, 
+    more so the five countries with the most cases per continent.
+    </p>
+    <svg>
+        
+    </svg>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+
+var covid = [
+  {
+    continent: 'Africa',
+    country: 'South Africa',
+    cases: 611450,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Africa',
+    country: 'Egypt',
+    cases: 97478,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Africa',
+    country: 'Morocco',
+    cases: 53252,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Africa',
+    country: 'Nigeria',
+    cases: 52548,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Africa',
+    country: 'Ghana',
+    cases: 43622,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Asia',
+    country: 'India',
+    cases: 3167323,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Asia',
+    country: 'Iran',
+    cases: 358905,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Asia',
+    country: 'Saudi Arabia',
+    cases: 308654,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Asia',
+    country: 'Bangladesh',
+    cases: 297083,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Asia',
+    country: 'Pakistan',
+    cases: 293711,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'America',
+    country: 'United States',
+    cases: 5740909,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'America',
+    country: 'Brazil',
+    cases: 3622861,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'America',
+    country: 'Peru',
+    cases: 600438,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'America',
+    country: 'Mexico',
+    cases: 563705,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'America',
+    country: 'Colombia',
+    cases: 551696,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Europe',
+    country: 'Russia',
+    cases: 961493,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Europe',
+    country: 'Spain',
+    cases: 405436,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Europe',
+    country: 'United Kingdom',
+    cases: 326614,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Europe',
+    country: 'Italy',
+    cases: 260298,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Europe',
+    country: 'France',
+    cases: 244854,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Oceania',
+    country: 'Australia',
+    cases: 24916,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Oceania',
+    country: 'New Zealand',
+    cases: 1339,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Oceania',
+    country: 'Guam',
+    cases: 907,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Oceania',
+    country: 'Papua New Guinea',
+    cases: 401,
+    color: '#80cbc4'
+  },
+  {
+    continent: 'Oceania',
+    country: 'French Polynesia',
+    cases: 310,
+    color: '#80cbc4'
+  }
+];
+
+
+	  
+    
+    
+
+	  
+
+
+    
+        
+    </script>
+</body>
+
+</html>
