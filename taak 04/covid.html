@@ -17,29 +17,56 @@
             width: 500px;
             display: block;
             margin: 0 auto;
-            padding-top: 2em;
+            padding-top: 1em;
+            padding-bottom: 1em;
         }
         body {
   font-family: 'Open Sans', sans-serif;
 }
-
-
+html {
+			font-family: Karla;
+			margin: 0 auto;
+		}	
+table { width:40%; margin-left:30%; margin-right:30%; text-align: center;}
+td {
+  padding: 0.5em;
+  font-size: 15px;
+  width: 20%;
+  margin: 0;
+  font-weight: bold;
+}
+#yellow {
+  background-color: #FED966;
+}
+#green {
+  background-color: #66fe8c;
+}
+#blue {
+  background-color: #66b5fe;
+}
+#purple {
+  background-color: #ce66fe;
+}
+#red {
+  background-color: #fe6673;
+}
 
 svg {
   width: 100vh;
-  height: 100vh;
+  height: 60vh;
   margin: 0 auto;
   display: block;
   
+}
+rect{
+  fill: #fe6673;
 }
 
 
 text {
   font-size: 12px;
   fill: black;
-  transform: rotate(30deg);
-  text-align: right;
-  position: absolute;
+
 }
 
 path {
@@ -72,32 +99,29 @@ text.divergence {
 
 text.value {
   font-size: 9px;
-  transform: rotate(0);
+
   
 }
 
 text.title {
   font-size: 22px;
-  transform: rotate(0);
+
 }
 
 text.label {
   font-size: 12px;
-  transform: rotate(0);
+
 }
 
 text.source {
   font-size: 10px;
-  transform: rotate(0);
+
 }
 
 
 
 
-html {
-			font-family: Karla;
-			margin: 0 auto;
-		}	
+
 
 		.axis {
 			font-size: 13px;
@@ -128,6 +152,23 @@ html {
     Right her we can see an overview of the amount of cases per continent, 
     more so the five countries with the most cases per continent.
     </p>
+    <table>
+      <td id="yellow">
+        Africa
+      </td>
+      <td id="green">
+        Asia
+      </td>
+      <td id="blue">
+        America
+      </td>
+      <td id="purple">
+        Europe
+      </td>
+      <td id="red">
+        Oceania
+      </td>
+    </table>
     <svg>
         
     </svg>
@@ -138,153 +179,153 @@ html {
 var covid = [
   {
     continent: 'Africa',
-    country: 'South Africa',
+    country: 'ZA',
     cases: 611450,
-    color: '#80cbc4'
+    color: '#FED966'
   },
   {
     continent: 'Africa',
-    country: 'Egypt',
+    country: 'EG',
     cases: 97478,
-    color: '#80cbc4'
+    color: '#FED966'
   },
   {
     continent: 'Africa',
-    country: 'Morocco',
+    country: 'MA',
     cases: 53252,
-    color: '#80cbc4'
+    color: '#FED966'
   },
   {
     continent: 'Africa',
-    country: 'Nigeria',
+    country: 'NG',
     cases: 52548,
-    color: '#80cbc4'
+    color: '#FED966'
   },
   {
     continent: 'Africa',
-    country: 'Ghana',
+    country: 'GH',
     cases: 43622,
-    color: '#80cbc4'
+    color: '#FED966'
   },
   {
     continent: 'Asia',
-    country: 'India',
+    country: 'IN',
     cases: 3167323,
-    color: '#80cbc4'
+    color: '#66fe8c'
   },
   {
     continent: 'Asia',
-    country: 'Iran',
+    country: 'IR',
     cases: 358905,
-    color: '#80cbc4'
+    color: '#66fe8c'
   },
   {
     continent: 'Asia',
-    country: 'Saudi Arabia',
+    country: 'SA',
     cases: 308654,
-    color: '#80cbc4'
+    color: '#66fe8c'
   },
   {
     continent: 'Asia',
-    country: 'Bangladesh',
+    country: 'BD',
     cases: 297083,
-    color: '#80cbc4'
+    color: '#66fe8c'
   },
   {
     continent: 'Asia',
-    country: 'Pakistan',
+    country: 'PK',
     cases: 293711,
-    color: '#80cbc4'
+    color: '#66fe8c'
   },
   {
     continent: 'America',
-    country: 'United States',
+    country: 'US',
     cases: 5740909,
-    color: '#80cbc4'
+    color: '#66b5fe'
   },
   {
     continent: 'America',
-    country: 'Brazil',
+    country: 'BR',
     cases: 3622861,
-    color: '#80cbc4'
+    color: '#66b5fe'
   },
   {
     continent: 'America',
-    country: 'Peru',
+    country: 'PE',
     cases: 600438,
-    color: '#80cbc4'
+    color: '#66b5fe'
   },
   {
     continent: 'America',
-    country: 'Mexico',
+    country: 'MX',
     cases: 563705,
-    color: '#80cbc4'
+    color: '#66b5fe'
   },
   {
     continent: 'America',
-    country: 'Colombia',
+    country: 'CO',
     cases: 551696,
-    color: '#80cbc4'
+    color: '#66b5fe'
   },
   {
     continent: 'Europe',
-    country: 'Russia',
+    country: 'RU',
     cases: 961493,
-    color: '#80cbc4'
+    color: '#ce66fe'
   },
   {
     continent: 'Europe',
-    country: 'Spain',
+    country: 'ES',
     cases: 405436,
-    color: '#80cbc4'
+    color: '#ce66fe'
   },
   {
     continent: 'Europe',
-    country: 'United Kingdom',
+    country: 'UK',
     cases: 326614,
-    color: '#80cbc4'
+    color: '#ce66fe'
   },
   {
     continent: 'Europe',
-    country: 'Italy',
+    country: 'IT',
     cases: 260298,
-    color: '#80cbc4'
+    color: '#ce66fe'
   },
   {
     continent: 'Europe',
-    country: 'France',
+    country: 'FR',
     cases: 244854,
-    color: '#80cbc4'
+    color: '#ce66fe'
   },
   {
     continent: 'Oceania',
-    country: 'Australia',
+    country: 'AU',
     cases: 24916,
-    color: '#80cbc4'
+    color: '#fe6673'
   },
   {
     continent: 'Oceania',
-    country: 'New Zealand',
+    country: 'NZ',
     cases: 1339,
-    color: '#80cbc4'
+    color: '#fe6673'
   },
   {
     continent: 'Oceania',
-    country: 'Guam',
+    country: 'GU',
     cases: 907,
-    color: '#80cbc4'
+    color: '#fe6673'
   },
   {
     continent: 'Oceania',
-    country: 'Papua New Guinea',
+    country: 'PG',
     cases: 401,
-    color: '#80cbc4'
+    color: '#fe6673'
   },
   {
     continent: 'Oceania',
-    country: 'French Polynesia',
+    country: 'PF',
     cases: 310,
-    color: '#80cbc4'
+    color: '#fe6673'
   }
 ];
 
@@ -294,7 +335,7 @@ var colorColumn = covid.color;
     
     var margin = 80;
     var width = 1000 - 2 * margin;
-    var height = 700 - 2 * margin;
+    var height = 600 - 2 * margin;
 
     var chart = svg.append('g')
       .attr('transform', `translate(${margin}, ${margin})`);
@@ -307,11 +348,9 @@ alldata = Array.from(covid);
     
     var yScale = d3.scaleLinear()
       .range([height, 0])
-      .domain([0, 6000000]);
+      .domain([0, 5740909]);
 
-    // vertical grid lines
-    // var makeXLines = () => d3.axisBottom()
-    //   .scale(xScale)
+ 
 
     var makeYLines = () => d3.axisLeft()
       .scale(yScale)
@@ -326,14 +365,7 @@ alldata = Array.from(covid);
     chart.append('g')
       .call(d3.axisLeft(yScale));
 
-    // vertical grid lines
-    // chart.append('g')
-    //   .attr('class', 'grid')
-    //   .attr('transform', `translate(0, ${height})`)
-    //   .call(makeXLines()
-    //     .tickSize(-height, 0, 0)
-    //     .tickFormat('')
-    //   )
+  
 
     chart.append('g')
       .attr('class', 'grid')
@@ -348,10 +380,7 @@ alldata = Array.from(covid);
       .enter()
       .append('g')
 	  
-	  var colorScale = d3.scaleOrdinal(d3.schemeCategory10)
-				.domain(covid.map(function (d) {
-					return d[colorColumn];
-				}));
+	  
 
     barGroups
       .append('rect')
@@ -360,9 +389,7 @@ alldata = Array.from(covid);
       .attr('y', (g) => yScale(g.cases))
       .attr('height', (g) => height - yScale(g.cases))
       .attr('width', xScale.bandwidth())
-	  .style("fill", function (d) {
-					return colorScale(d[colorColumn]);
-				})
+      .style("fill", function(d) { return d.color; })
 				
       .on('mouseenter', function (actual, i) {
         d3.selectAll('.value')

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ndbx formatVersion="21" type="file" uuid="b5a906f0-7fcc-499f-8a82-f4f8f1204ca1">
+    <property name="canvasHeight" value="1000"/>
+    <property name="canvasWidth" value="857"/>
+    <property name="canvasX" value="-150"/>
+    <property name="canvasY" value="-200"/>
+    <node name="root" prototype="core.network" renderedChild="combine7">
+        <node name="align1" position="4.00,8.00" prototype="corevector.align">
+            <port name="position" type="point" value="10.00,6.00"/>
+            <port name="halign" type="string" value="left"/>
+        </node>
+        <node name="align2" position="7.00,8.00" prototype="corevector.align">
+            <port name="position" type="point" value="10.00,-16.00"/>
+            <port name="halign" type="string" value="left"/>
+        </node>
+        <node name="align3" position="24.00,9.00" prototype="corevector.align">
+            <port name="position" type="point" value="350.00,-16.00"/>
+            <port name="halign" type="string" value="left"/>
+        </node>
+        <node name="align4" position="21.00,9.00" prototype="corevector.align">
+            <port name="position" type="point" value="350.00,6.00"/>
+            <port name="halign" type="string" value="left"/>
+        </node>
+        <node name="color1" position="11.00,8.00" prototype="color.color">
+            <port name="color" type="color" value="#cb86c3ff"/>
+        </node>
+        <node name="color2" position="11.00,9.00" prototype="color.color">
+            <port name="color" type="color" value="#00c5cbff"/>
+        </node>
+        <node name="color3" position="28.00,9.00" prototype="color.color">
+            <port name="color" type="color" value="#cb86c3ff"/>
+        </node>
+        <node name="color4" position="28.00,10.00" prototype="color.color">
+            <port name="color" type="color" value="#00c5cbff"/>
+        </node>
+        <node name="color5" position="15.00,18.00" prototype="color.color">
+            <port name="color" type="color" value="#ffffffff"/>
+        </node>
+        <node name="colorize1" position="7.00,10.00" prototype="corevector.colorize"/>
+        <node name="colorize2" position="4.00,10.00" prototype="corevector.colorize"/>
+        <node name="colorize3" position="9.00,13.00" prototype="corevector.colorize"/>
+        <node name="colorize4" position="12.00,13.00" prototype="corevector.colorize"/>
+        <node name="colorize5" position="24.00,11.00" prototype="corevector.colorize"/>
+        <node name="colorize6" position="21.00,11.00" prototype="corevector.colorize"/>
+        <node name="colorize7" position="15.00,21.00" prototype="corevector.colorize"/>
+        <node name="combine1" position="2.00,13.00" prototype="list.combine"/>
+        <node name="combine2" position="11.00,17.00" prototype="list.combine"/>
+        <node name="combine3" position="6.00,17.00" prototype="list.combine"/>
+        <node name="combine5" position="21.00,17.00" prototype="list.combine"/>
+        <node name="combine7" position="13.00,25.00" prototype="list.combine"/>
+        <node name="count1" position="5.00,1.00" prototype="list.count"/>
+        <node name="count2" position="22.00,2.00" prototype="list.count"/>
+        <node name="import_csv1" position="2.00,-1.00" prototype="data.import_csv">
+            <port name="file" type="string" value="taak 02/imdbseries.csv"/>
+        </node>
+        <node name="import_csv2" position="19.00,0.00" prototype="data.import_csv">
+            <port name="file" type="string" value="taak 02/imdbmovie.csv"/>
+        </node>
+        <node name="line1" position="5.00,-1.00" prototype="corevector.line">
+            <port name="point2" type="point" value="0.00,600.00"/>
+        </node>
+        <node name="line2" position="22.00,0.00" prototype="corevector.line">
+            <port name="point2" type="point" value="0.00,600.00"/>
+        </node>
+        <node name="lookup1" position="1.00,4.00" prototype="data.lookup">
+            <port name="key" type="string" value="show"/>
+        </node>
+        <node name="lookup2" position="4.00,4.00" prototype="data.lookup">
+            <port name="key" type="string" value="imdb"/>
+        </node>
+        <node name="lookup3" position="7.00,4.00" prototype="data.lookup">
+            <port name="key" type="string" value="me"/>
+        </node>
+        <node name="lookup4" position="24.00,5.00" prototype="data.lookup">
+            <port name="key" type="string" value="me"/>
+        </node>
+        <node name="lookup5" position="21.00,5.00" prototype="data.lookup">
+            <port name="key" type="string" value="imdb"/>
+        </node>
+        <node name="lookup6" position="18.00,5.00" prototype="data.lookup">
+            <port name="key" type="string" value="movie"/>
+        </node>
+        <node name="rect1" position="4.00,6.00" prototype="corevector.rect">
+            <port name="height" type="float" value="20.0"/>
+        </node>
+        <node name="rect2" position="7.00,6.00" prototype="corevector.rect">
+            <port name="height" type="float" value="20.0"/>
+        </node>
+        <node name="rect3" position="9.00,12.00" prototype="corevector.rect">
+            <port name="position" type="point" value="195.82,-250.00"/>
+            <port name="width" type="float" value="20.0"/>
+            <port name="height" type="float" value="20.0"/>
+        </node>
+        <node name="rect4" position="12.00,12.00" prototype="corevector.rect">
+            <port name="position" type="point" value="59.00,-183.00"/>
+            <port name="width" type="float" value="20.0"/>
+            <port name="height" type="float" value="20.0"/>
+        </node>
+        <node name="rect5" position="12.00,19.00" prototype="corevector.rect">
+            <port name="position" type="point" value="157.00,193.00"/>
+            <port name="width" type="float" value="857.0"/>
+            <port name="height" type="float" value="1000.0"/>
+        </node>
+        <node name="rect6" position="21.00,7.00" prototype="corevector.rect">
+            <port name="height" type="float" value="20.0"/>
+        </node>
+        <node name="rect8" position="24.00,7.00" prototype="corevector.rect">
+            <port name="height" type="float" value="20.0"/>
+        </node>
+        <node name="resample1" position="4.00,2.00" prototype="corevector.resample">
+            <port name="method" type="string" value="amount"/>
+        </node>
+        <node name="resample2" position="21.00,3.00" prototype="corevector.resample">
+            <port name="method" type="string" value="amount"/>
+        </node>
+        <node name="textpath1" position="1.00,6.00" prototype="corevector.textpath">
+            <port name="text" type="string" value=""/>
+            <port name="font_name" type="string" value="Candara"/>
+            <port name="font_size" type="float" value="17.0"/>
+            <port name="align" type="string" value="RIGHT"/>
+        </node>
+        <node name="textpath10" position="16.00,17.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="BEST MOVIES AND TV SHOWS ACCORDING "/>
+            <port name="font_name" type="string" value="Candara"/>
+            <port name="font_size" type="float" value="25.0"/>
+            <port name="position" type="point" value="174.00,-613.00"/>
+        </node>
+        <node name="textpath2" position="11.00,6.00" prototype="corevector.textpath">
+            <port name="font_size" type="float" value="12.0"/>
+            <port name="position" type="point" value="30.00,11.00"/>
+        </node>
+        <node name="textpath3" position="11.00,4.00" prototype="corevector.textpath">
+            <port name="font_size" type="float" value="12.0"/>
+            <port name="position" type="point" value="30.00,-12.00"/>
+        </node>
+        <node name="textpath4" position="18.00,7.00" prototype="corevector.textpath">
+            <port name="text" type="string" value=""/>
+            <port name="font_name" type="string" value="Candara"/>
+            <port name="font_size" type="float" value="17.0"/>
+            <port name="align" type="string" value="RIGHT"/>
+            <port name="position" type="point" value="339.00,0.00"/>
+        </node>
+        <node name="textpath5" position="28.00,5.00" prototype="corevector.textpath">
+            <port name="font_size" type="float" value="12.0"/>
+            <port name="position" type="point" value="370.00,-12.00"/>
+        </node>
+        <node name="textpath6" position="28.00,7.00" prototype="corevector.textpath">
+            <port name="font_size" type="float" value="12.0"/>
+            <port name="position" type="point" value="370.00,11.00"/>
+        </node>
+        <node name="textpath7" position="15.00,15.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="IMDB Rating"/>
+            <port name="font_name" type="string" value="Candara"/>
+            <port name="font_size" type="float" value="17.0"/>
+            <port name="position" type="point" value="264.00,-378.00"/>
+        </node>
+        <node name="textpath8" position="15.00,14.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="My Rating"/>
+            <port name="font_name" type="string" value="Candara"/>
+            <port name="font_size" type="float" value="17.0"/>
+            <port name="position" type="point" value="117.00,-311.00"/>
+        </node>
+        <node name="textpath9" position="16.00,16.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="TO IMDB THAT I HAVE WATCHED"/>
+            <port name="font_name" type="string" value="Candara"/>
+            <port name="font_size" type="float" value="25.0"/>
+            <port name="position" type="point" value="174.00,-515.00"/>
+        </node>
+        <node name="translate1" position="3.00,20.00" prototype="corevector.translate"/>
+        <node name="translate2" position="19.00,23.00" prototype="corevector.translate"/>
+        <conn input="lookup2.list" output="import_csv1"/>
+        <conn input="lookup3.list" output="import_csv1"/>
+        <conn input="lookup1.list" output="import_csv1"/>
+        <conn input="textpath1.text" output="lookup1"/>
+        <conn input="rect1.width" output="lookup2"/>
+        <conn input="align1.shape" output="rect1"/>
+        <conn input="combine1.list1" output="textpath1"/>
+        <conn input="combine1.list2" output="align1"/>
+        <conn input="count1.list" output="import_csv1"/>
+        <conn input="resample1.points" output="count1"/>
+        <conn input="resample1.shape" output="line1"/>
+        <conn input="translate1.translate" output="resample1"/>
+        <conn input="rect2.width" output="lookup3"/>
+        <conn input="align2.shape" output="rect2"/>
+        <conn input="combine1.list3" output="align2"/>
+        <conn input="colorize2.shape" output="align1"/>
+        <conn input="colorize1.shape" output="align2"/>
+        <conn input="combine1.list4" output="colorize1"/>
+        <conn input="combine1.list5" output="colorize2"/>
+        <conn input="colorize2.fill" output="color1"/>
+        <conn input="colorize1.fill" output="color2"/>
+        <conn input="textpath3.text" output="lookup3"/>
+        <conn input="textpath2.text" output="lookup2"/>
+        <conn input="combine1.list6" output="textpath3"/>
+        <conn input="combine1.list7" output="textpath2"/>
+        <conn input="colorize4.fill" output="color2"/>
+        <conn input="colorize3.fill" output="color1"/>
+        <conn input="colorize3.shape" output="rect3"/>
+        <conn input="colorize4.shape" output="rect4"/>
+        <conn input="combine2.list2" output="colorize4"/>
+        <conn input="translate1.shape" output="combine3"/>
+        <conn input="lookup5.list" output="import_csv2"/>
+        <conn input="lookup4.list" output="import_csv2"/>
+        <conn input="lookup6.list" output="import_csv2"/>
+        <conn input="textpath4.text" output="lookup6"/>
+        <conn input="rect6.width" output="lookup5"/>
+        <conn input="align4.shape" output="rect6"/>
+        <conn input="combine5.list1" output="textpath4"/>
+        <conn input="combine5.list2" output="align4"/>
+        <conn input="count2.list" output="import_csv2"/>
+        <conn input="resample2.points" output="count2"/>
+        <conn input="resample2.shape" output="line2"/>
+        <conn input="translate2.translate" output="resample2"/>
+        <conn input="rect8.width" output="lookup4"/>
+        <conn input="align3.shape" output="rect8"/>
+        <conn input="combine5.list3" output="align3"/>
+        <conn input="colorize6.shape" output="align4"/>
+        <conn input="colorize5.shape" output="align3"/>
+        <conn input="combine5.list4" output="colorize5"/>
+        <conn input="combine5.list5" output="colorize6"/>
+        <conn input="colorize6.fill" output="color3"/>
+        <conn input="colorize5.fill" output="color4"/>
+        <conn input="textpath5.text" output="lookup4"/>
+        <conn input="textpath6.text" output="lookup5"/>
+        <conn input="combine5.list6" output="textpath5"/>
+        <conn input="combine5.list7" output="textpath6"/>
+        <conn input="translate2.shape" output="combine5"/>
+        <conn input="combine2.list4" output="textpath8"/>
+        <conn input="colorize7.fill" output="color5"/>
+        <conn input="colorize7.shape" output="rect5"/>
+        <conn input="combine2.list1" output="colorize7"/>
+        <conn input="combine3.list1" output="combine2"/>
+        <conn input="combine3.list2" output="combine1"/>
+        <conn input="combine7.list1" output="translate1"/>
+        <conn input="combine7.list2" output="translate2"/>
+        <conn input="combine2.list3" output="colorize3"/>
+        <conn input="combine2.list5" output="textpath7"/>
+        <conn input="combine2.list6" output="textpath9"/>
+        <conn input="combine2.list7" output="textpath10"/>
+    </node>
+</ndbx>
